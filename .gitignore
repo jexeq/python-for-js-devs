@@ -1,0 +1,23 @@
+python_project/env/
+__pycache__/
+*.pyc
+
+# Ignore the virtual environment
+python_intro/env/
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+# Ignore other common Python artifacts
+*.egg-info/
+*.log
+*.pot
+*.py,cover
+# Ignore coverage files
+.coverage
+.coverage.*
+.coveragerc
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+# Ignore other potential environment folders
+.venv/
+venv/
