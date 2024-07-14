@@ -1,3 +1,5 @@
+import asyncio
+
 """
 Asynchronous programming is a crucial concept in both Python and JavaScript, allowing for non-blocking operations, particularly in I/O-bound applications.
 
@@ -129,4 +131,69 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+# Comparison and operations with Promise.all(), Promise.allSettled(), Promise.race()
+
+'''
+asyncio.gather(): Similar to Promise.all(), it runs multiple coroutines concurrently and gathers their results.
+'''
+
+# async def task_1():
+#     await asyncio.sleep(1)
+#     return "Task 1 complete"
+
+# async def task_2():
+#     await asyncio.sleep(2)
+#     return "Task 2 complete"
+
+# async def main():
+#     results = await asyncio.gather(task_1(), task_2())
+#     print(results)
+
+# asyncio.run(main())
+
+'''
+asyncio.as_completed(): Similar to Promise.race(), it returns an iterator that yields completed tasks as they finish.
+'''
+
+# async def task_1():
+#     await asyncio.sleep(1)
+#     return "Task 1 complete"
+
+# async def task_2():
+#     await asyncio.sleep(2)
+#     return "Task 2 complete"
+
+# async def main():
+#     tasks = [task_1(), task_2()]
+#     for completed in asyncio.as_completed(tasks):
+#         result = await completed
+#         print(result)
+
+# asyncio.run(main())
+
+'''
+asyncio.wait(): Similar to Promise.allSettled(), it waits for a group of tasks to complete, 
+returning their results and any exceptions.
+'''
+# async def task_1():
+#     await asyncio.sleep(1)
+#     return "Task 1 complete"
+
+# async def task_2():
+#     await asyncio.sleep(2)
+#     raise ValueError("Error in Task 2")
+
+# async def main():
+#     tasks = [task_1(), task_2()]
+#     done, pending = await asyncio.wait(tasks, return_when=asyncio.ALL_COMPLETED)
+    
+#     for task in done:
+#         try:
+#             result = task.result()
+#             print(result)
+#         except Exception as e:
+#             print(f"Task raised an exception: {e}")
+
+# asyncio.run(main())
 
