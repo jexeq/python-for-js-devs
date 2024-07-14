@@ -138,6 +138,59 @@ set_example.discard(2)  # Removes an item; does not raise an error if not found 
 print(f"Set after discarding 2: {set_example}")
 print(f"Set Length: {len(set_example)}")  # Returns the number of unique items / Retorna el número de elementos únicos
 
+# FrozenSet
+# Conjunto inmutable
+
+'''
+A frozenset in Python is an immutable version of a set. 
+This means that once a frozenset is created, its elements cannot be modified, 
+added, or removed. 
+frozenset objects are hashable and can be used as keys in a dictionary or elements of another set, 
+unlike regular sets which are mutable and therefore unhashable.
+
+Here are some key points about frozenset:
+
+- Immutability: You cannot change the elements of a frozenset once it is created.
+- Hashable: Since they are immutable, frozensets can be used as keys in dictionaries or as elements in other sets.
+- Set Operations: frozenset supports all the standard set operations such as union, intersection, difference, and symmetric difference.
+'''
+
+# Creating a frozenset from a list
+frozen = frozenset([1, 2, 3, 4, 5])
+print(frozen)  # Output: frozenset({1, 2, 3, 4, 5})
+
+# Creating a frozenset from a set
+regular_set = {1, 2, 3, 4, 5}
+frozen = frozenset(regular_set)
+print(frozen)  # Output: frozenset({1, 2, 3, 4, 5})
+
+## Common Operations on frozenset / Operaciones comunes sobre frozenset
+
+# Creating frozensets
+fset1 = frozenset([1, 2, 3])
+fset2 = frozenset([3, 4, 5])
+
+# Union
+print(fset1.union(fset2))  # Output: frozenset({1, 2, 3, 4, 5})
+
+# Intersection
+print(fset1.intersection(fset2))  # Output: frozenset({3})
+
+# Difference
+print(fset1.difference(fset2))  # Output: frozenset({1, 2})
+
+# Symmetric Difference
+print(fset1.symmetric_difference(fset2))  # Output: frozenset({1, 2, 4, 5})
+
+# Checking subsets
+print(fset1.issubset(fset2))  # Output: False
+
+# Checking supersets
+print(fset1.issuperset(fset2))  # Output: False
+
+# Checking disjoint sets
+print(fset1.isdisjoint(fset2))  # Output: False
+
 # Summary of Data Types
 # Resumen de tipos de datos:
 # - Numbers: int, float, complex / Números: int, float, complex
@@ -146,3 +199,62 @@ print(f"Set Length: {len(set_example)}")  # Returns the number of unique items /
 # - Tuples: tuple / Tuplas: tuple
 # - Dictionaries: dict / Diccionarios: dict
 # - Sets: set / Conjuntos: set
+# - Frozen Sets: frozenset / Conjuntos inmutables
+
+'''
+Falsy Values in Python
+The following values are considered falsy in Python:
+
+    None
+    False
+    Zero of any numeric type: 0, 0.0, 0j (complex numbers)
+    Empty sequences and collections: 
+        '' (empty string), 
+        [] (empty list), 
+        () (empty tuple), 
+        {} (empty dictionary), 
+        set() (empty set), 
+        frozenset() (empty frozenset)
+    User-defined objects that implement __bool__() or __len__() methods and return False or 0 respectively.
+    
+Truthy Values in Python
+Any value that is not falsy is considered truthy. Here are some examples:
+
+    Non-empty sequences and collections: "hello", [1, 2, 3], (1, 2, 3), {'key': 'value'}, {1, 2}, frozenset({1, 2})
+    Numbers other than zero: 1, -1, 0.1, 3.14
+    True
+    User-defined objects that implement __bool__() or __len__() methods and return True or a non-zero value respectively.
+
+'''
+
+# Falsy values
+if not None:
+    print("None is falsy")  # Output: None is falsy
+
+if not False:
+    print("False is falsy")  # Output: False is falsy
+
+if not 0:
+    print("0 is falsy")  # Output: 0 is falsy
+
+if not "":
+    print("Empty string is falsy")  # Output: Empty string is falsy
+
+if not []:
+    print("Empty list is falsy")  # Output: Empty list is falsy
+
+if not {}:
+    print("Empty dict is falsy")  # Output: Empty dict is falsy
+
+if not ():
+    print("Empty tuple is falsy.")
+
+# Truthy values
+if "hello":
+    print("Non-empty string is truthy")  # Output: Non-empty string is truthy
+
+if [1, 2, 3]:
+    print("Non-empty list is truthy")  # Output: Non-empty list is truthy
+
+if 1:
+    print("Non-zero number is truthy")  # Output: Non-zero number is truthy
