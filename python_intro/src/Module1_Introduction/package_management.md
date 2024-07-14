@@ -58,7 +58,7 @@ To see a list of all installed packages in your current environment, use:
 pip list
 ```
 
-## Listing Installed Packages
+## Saving Packages List
 
 To save your project's dependencies to a requirements.txt file, use:
 
