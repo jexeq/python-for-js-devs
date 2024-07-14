@@ -1,3 +1,20 @@
+''' 
+NumPy (Numerical Python) is a powerful open-source library in Python 
+that provides support for large, multi-dimensional arrays and matrices, 
+along with a collection of mathematical functions to operate on these arrays. 
+It is a fundamental package for scientific computing and serves as the backbone 
+for many other data science libraries, such as Pandas and Matplotlib.
+
+Common Use Cases:
+ - Data analysis and manipulation
+ - Numerical computations
+ - Scientific computing
+ - Machine learning and deep learning frameworks
+
+ https://numpy.org/doc/stable/
+
+'''
+
 # NumPy Example: Basic Operations
 
 # Importing the NumPy library

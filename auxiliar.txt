@@ -10,6 +10,10 @@ python-for-js-devs/
 │   │   ├── Module1_Introduction/
 │   │   │   ├── introduction.py         # Example file for Module 1
 │   │   │   └── introduction.md
+│   │   ├── Module1_VirtualEnvironments/
+│   │   │   ├── setup_venv.md
+│   │   │   ├── package_management.md
+│   │   │   └── virtual_environments.md
 │   │   ├── Module2_PythonBasics/
 │   │   │   ├── syntax_and_structure.py
 │   │   │   ├── data_types.py
@@ -31,16 +35,12 @@ python-for-js-devs/
 │   │   │   ├── pandas_example.py
 │   │   │   ├── matplotlib_example.py
 │   │   │   └── common_libraries.md
-│   │   ├── Module7_VirtualEnvironments/
-│   │   │   ├── setup_venv.md
-│   │   │   ├── package_management.md
-│   │   │   └── virtual_environments.md
-│   │   ├── Module8_Transitioning/
+│   │   ├── Module7_Transitioning/
 │   │   │   ├── async_programming.py
 │   │   │   ├── working_with_apis.py
 │   │   │   ├── debugging_testing.md
 │   │   │   └── transitioning.md
-│   │   └── Module9_Resources/
+│   │   └── Module8_Resources/
 │   │       └── resources.md
 │   └── tests/
 │       ├── test_module1.py           # Test for Module 1
